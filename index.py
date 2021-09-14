@@ -72,7 +72,7 @@ def create_buttons(answer, l_margin, r_margin):
 
 def frame1():
     # display logo
-    image = QPixmap("logo.png")
+    image = QPixmap("assets/logo.png")
     logo = QLabel()
     logo.setPixmap(image)
     logo.setAlignment(QtCore.Qt.AlignCenter)
@@ -138,7 +138,7 @@ def frame2():
     widgets["answer4"].append(button4)
 
     # trocar pelo github  depois
-    image = QPixmap("logopequena.png")
+    image = QPixmap("assets/logopequena.png")
     logo = QLabel()
     logo.setPixmap(image)
     logo.setAlignment(QtCore.Qt.AlignCenter)
