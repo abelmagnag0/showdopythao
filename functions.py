@@ -1,15 +1,13 @@
 from PyQt5.QtWidgets import QGridLayout, QLabel, QPushButton
 from PyQt5.QtGui import QPixmap, QCursor
 from PyQt5 import QtCore
-from urllib.request import urlopen
 import json
 import pandas as pd
 import random
 
-with urlopen("https://opentdb.com/api.php?amount=50&category=18&difficulty=medium&type=multiple") as webpage:
-    data = json.loads(webpage.read().decode())
-    df = pd.DataFrame(data["results"])
-
+api = open('db.json',)
+data = json.load(api)
+df = pd.DataFrame(data["results"])
 
 def preload_data(idx):
     question = df["question"][idx]
@@ -42,6 +40,7 @@ def preload_data(idx):
     parameters["answer3"].append(all_answers[2])
     parameters["answer4"].append(all_answers[3])
     print(parameters["correct"][-1])
+
 
 parameters = {
     "question": [],
@@ -130,7 +129,7 @@ def is_correct(btn):
         temp_score = parameters["score"][-1]
         parameters["score"].pop()
         parameters["score"].append(temp_score + 10)
-        
+
         parameters["index"].pop()
         parameters["index"].append(random.randint(0, 49))
 
