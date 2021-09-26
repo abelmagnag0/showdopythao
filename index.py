@@ -13,7 +13,7 @@ window.setWindowTitle("Show do Pythão")
 
 # tamanho da tela e onde ela se inicia
 window.setFixedWidth(1000)
-window.move(2700, 200)
+window.move(460, 200)
     
 window.setStyleSheet("background:  #62BAAC;")
 

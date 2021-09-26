@@ -2,19 +2,7 @@
   "results": [
     {
       "category": "naopenseiaindanisso",
-      "question": "Em Python, quando mais de um operador aparece em uma expressão, a ordem de avaliação depende das regras de precedência de cada linguagem. Assim, ao programar em Python, além de observar essas regras, é preciso considerar, ainda, a forma como a linguagem representa seus operadores, conforme demonstrado nos comandos a seguir.",
-      "additional": "x=7*3**2%4 print (x)",
-      "correct_answer": "3",
-      "incorrect_answers": [
-        "1",
-        "7",
-        "15"
-      ]
-    },
-    {
-      "category": "naopenseiaindanisso",
       "question": "Na linguagem de programação Python, existem 3 estruturas para armazenar dados indexados. A estrutura cujos valores são imutáveis depois de sua criação é conhecida como:",
-      "additional": "",
       "correct_answer": "tupla",
       "incorrect_answers": [
         "operador",
@@ -25,7 +13,6 @@
     {
       "category": "naopenseiaindanisso",
       "question": "Assinale a alternativa que apresenta o código Python que implementa corretamente uma função para o cálculo da área de um retângulo.",
-      "additional": "",
       "correct_answer": "def area(comp, larg): return comp * larg",
       "incorrect_answers": [
         "def area(comp, larg){ return comp*larg}",
@@ -35,63 +22,17 @@
     },
     {
       "category": "naopenseiaindanisso",
-      "question": "Um desenvolvedor implementou um programa para exibir a média de um dado retirado de uma grande base de dados. O trecho do código que mostra o resultado é apresentado a seguir. Assinale a alternativa correta acerca desse trecho de código sabendo que a média do usuário foi 75.",
-      "additional": "print('Sua média foi {}.'.format(med))",
-      "correct_answer": "O programa imprime: Sua média foi 75.",
-      "incorrect_answers": [
-        "O programa imprime: Sua média foi {}",
-        "O programa imprime: Sua média foi Null",
-        "O programa apresenta um erro na impressão porque tenta converter tipo numérico em caractere."
-      ]
-    },
-    {
-      "category": "naopenseiaindanisso",
-      "question": "Analise o seguinte código Python, escrito por um cientista de dados, e assinale a alternativa correta",
-      "additional": "nome = input('Qual o seu nome?') print(nome)",
-      "correct_answer": "O resultado do comando print é apresentar na tela o nome informado pelo usuário. ",
-      "incorrect_answers": [
-        "O código não irá funcionar pois está faltando ‘;’ ao final de cada linha.",
-        "Falta a estrutura correta de criação de uma classe para a execução do comando.",
-        "Falta definir o tipo da variável nome, por isso o programa não irá executar."
-      ]
-    },
-    {
-      "category": "naopenseiaindanisso",
       "question": " O método capitalize da classe String do Python é utilizado para:",
-      "additional": "",
-      "correct_answer": "retornar uma cópia de uma string somente com o primeiro caractere em maiúsculo.",
+      "correct_answer": "retorna uma cópia com o primeiro caractere em maiúsculo.",
       "incorrect_answers": [
         "remover todos os espaços de uma string.",
         "verificar se todos os caracteres da string são numéricos.",
-        "retornar uma cópia de uma string com todos os caracteres em minúsculo."
-      ]
-    },
-    {
-      "category": "naopenseiaindanisso",
-      "question": " Sobre a linguagem de programação Python, marque a alternativa INCORRETA.",
-      "additional": "",
-      "correct_answer": "O operador lógico de conjunção ('e', como em a e b) é &&.",
-      "incorrect_answers": [
-        "A separação de blocos de código em Phyton é feita utilizando a indentação de código.",
-        "As funções são definidas em Phyton utilizando a palavra chave def.",
-        "Python suporta e faz uso constante de tratamento de exceções como uma forma de testar condições de erro e outros eventos inesperados no programa."
-      ]
-    },
-    {
-      "category": "naopenseiaindanisso",
-      "question": "Analise o seguinte código Python, escrito por um cientista de dados, e assinale a alternativa correta.",
-      "additional": "num = 88    print ('par' if num%2 == 0 else 'ímpar')",
-      "correct_answer": "O resultado da execução de código é a informação ‘par’ na tela. ",
-      "incorrect_answers": [
-        "O resultado da execução de código é a informação ‘ímpar’ na tela.",
-        "O código executado apresenta na tela o resultado ‘0’.",
-        "O código gera um erro, pois o comando if...else não está correto."
+        "retorna uma cópia com todos os caracteres em minúsculo."
       ]
     },
     {
       "category": "naopenseiaindanisso",
       "question": "Na linguagem de programação Python, o método que permite verificar se uma string começa com alguns caracteres é o",
-      "additional": "",
       "correct_answer": "startswith",
       "incorrect_answers": [
         "return",
@@ -102,7 +43,6 @@
     {
       "category": "naopenseiaindanisso",
       "question": "Considere uma String s, que armazena o valor 'ALO MUNDO'. A alternativa com as instruções que exibiriam a substring 'MU' seria",
-      "additional": "",
       "correct_answer": "s[-5:-3]",
       "incorrect_answers": [
         "s[5:6]",
@@ -113,7 +53,6 @@
     {
       "category": "naopenseiaindanisso",
       "question": "No comando de atribuição em Python valor = raw_input(“Digite um valor: ”), qual o tipo da variável valor?",
-      "additional": "",
       "correct_answer": "str",
       "incorrect_answers": [
         "bool",
@@ -123,20 +62,7 @@
     },
     {
       "category": "naopenseiaindanisso",
-      "question": "Em relação às características da linguagem Python, é correto afirmar que",
-      "additional": "",
-      "correct_answer": "tem suporte a herança múltipla e polimorfismo.",
-      "incorrect_answers": [
-        "é uma linguagem fortemente tipada, ou seja, é preciso declarar variáveis e seus tipos.",
-        "deve ser usada, exclusivamente, para programação web.",
-        "uma String Python é uma sequência imutável, alocada estaticamente, com restrição de tamanho."
-      ]
-    },
-    {
-      "category": "naopenseiaindanisso",
       "question": "Considere o trecho de código: candidatos = ['José', 'João', 'Cibelly', 'Sonivaldo','Dariane']. É CORRETO afirmar que",
-      "additional": "",
-      "temp": "",
       "correct_answer": "candidatos[-2] retornaria o penúltimo elemento da lista.",
       "incorrect_answers": [
         "candidatos.len() obtem o tamanho da lista.",
@@ -146,411 +72,192 @@
     },
     {
       "category": "naopenseiaindanisso",
-      "question": "Em Python, quando mais de um operador aparece em uma expressão, a ordem de avaliação depende das regras de precedência de cada linguagem. Assim, ao programar em Python, além de observar essas regras, é preciso considerar, ainda, a forma como a linguagem representa seus operadores, conforme demonstrado nos comandos a seguir.",
-      "additional": "x=7*3**2%4 print (x)",
-      "correct_answer": "3",
+      "question": "O que vai ser impresso com o código 'for i in range(9,15,3):  \nprint(i)' ?",
+      "correct_answer": "2",
       "incorrect_answers": [
         "1",
-        "7",
-        "15"
+        "3",
+        "9"
       ]
     },
     {
       "category": "naopenseiaindanisso",
-      "question": "Na linguagem de programação Python, existem 3 estruturas para armazenar dados indexados. A estrutura cujos valores são imutáveis depois de sua criação é conhecida como:",
-      "additional": "",
-      "correct_answer": "tupla",
+      "question": "'É a tecnologia criada pela Microsoft para o desenvolvimento de aplicações web'. A definição acima refere-se a",
+      "correct_answer": "ASP",
       "incorrect_answers": [
-        "operador",
-        "lista",
-        "classe"
+        "PHP",
+        "HTML",
+        "JSP"
       ]
     },
     {
       "category": "naopenseiaindanisso",
-      "question": "Assinale a alternativa que apresenta o código Python que implementa corretamente uma função para o cálculo da área de um retângulo.",
-      "additional": "",
-      "correct_answer": "def area(comp, larg): return comp * larg",
+      "question": "É correto afirmar que, quando se sabe de antemão quantas vezes o loop deverá ser executado, o comando utilizado é o",
+      "correct_answer": "for",
       "incorrect_answers": [
-        "def area(comp, larg){ return comp*larg}",
-        "function area(comp, larg): return comp*larg",
-        "def area(comp, larg)(return comp*larg)"
+        "while",
+        "if",
+        "do while"
       ]
     },
     {
       "category": "naopenseiaindanisso",
-      "question": "Um desenvolvedor implementou um programa para exibir a média de um dado retirado de uma grande base de dados. O trecho do código que mostra o resultado é apresentado a seguir. Assinale a alternativa correta acerca desse trecho de código sabendo que a média do usuário foi 75.",
-      "additional": "print('Sua média foi {}.'.format(med))",
-      "correct_answer": "O programa imprime: Sua média foi 75.",
+      "question": "Qual é a sintaxe correta para aparecer 'Hello World' com Python",
+      "correct_answer": "print('Hello World')",
       "incorrect_answers": [
-        "O programa imprime: Sua média foi {}",
-        "O programa imprime: Sua média foi Null",
-        "O programa apresenta um erro na impressão porque tenta converter tipo numérico em caractere."
+        "console.log('Hello World')",
+        "input('Hello World')",
+        "echo('Hello World')"
       ]
     },
     {
       "category": "naopenseiaindanisso",
-      "question": "Analise o seguinte código Python, escrito por um cientista de dados, e assinale a alternativa correta",
-      "additional": "nome = input('Qual o seu nome?') print(nome)",
-      "correct_answer": "O resultado do comando print é apresentar na tela o nome informado pelo usuário. ",
+      "question": "Assinale a opção que não apresenta um exemplo de Linguagem de Programação.",
+      "correct_answer": "Wordpress",
       "incorrect_answers": [
-        "O código não irá funcionar pois está faltando ‘;’ ao final de cada linha.",
-        "Falta a estrutura correta de criação de uma classe para a execução do comando.",
-        "Falta definir o tipo da variável nome, por isso o programa não irá executar."
+        "Assembly",
+        "Visual Basic",
+        "Erlang"
       ]
     },
     {
       "category": "naopenseiaindanisso",
-      "question": " O método capitalize da classe String do Python é utilizado para:",
-      "additional": "",
-      "correct_answer": "retornar uma cópia de uma string somente com o primeiro caractere em maiúsculo.",
+      "question": "Como se fazem comentários em Py?",
+      "correct_answer": "# Isso é um comentário",
       "incorrect_answers": [
-        "remover todos os espaços de uma string.",
-        "verificar se todos os caracteres da string são numéricos.",
-        "retornar uma cópia de uma string com todos os caracteres em minúsculo."
+        "--> Isso é um comentário",
+        "// Isso é um comentário",
+        "!# Isso é um comentário"
       ]
     },
     {
       "category": "naopenseiaindanisso",
-      "question": " Sobre a linguagem de programação Python, marque a alternativa INCORRETA.",
-      "additional": "",
-      "correct_answer": "O operador lógico de conjunção ('e', como em a e b) é &&.",
+      "question": "Qual NÃO é um jeito de se declarar variáveis",
+      "correct_answer": "my-var",
       "incorrect_answers": [
-        "A separação de blocos de código em Phyton é feita utilizando a indentação de código.",
-        "As funções são definidas em Phyton utilizando a palavra chave def.",
-        "Python suporta e faz uso constante de tratamento de exceções como uma forma de testar condições de erro e outros eventos inesperados no programa."
+        "_myvar",
+        "my_var",
+        "Myvar"
       ]
     },
     {
       "category": "naopenseiaindanisso",
-      "question": "Analise o seguinte código Python, escrito por um cientista de dados, e assinale a alternativa correta.",
-      "additional": "num = 88    print ('par' if num%2 == 0 else 'ímpar')",
-      "correct_answer": "O resultado da execução de código é a informação ‘par’ na tela. ",
+      "question": "Qual é a extensão correta para arquivos python?",
+      "correct_answer": ".py",
       "incorrect_answers": [
-        "O resultado da execução de código é a informação ‘ímpar’ na tela.",
-        "O código executado apresenta na tela o resultado ‘0’.",
-        "O código gera um erro, pois o comando if...else não está correto."
+        ".pty",
+        ".pyth",
+        ".pyx"
       ]
     },
     {
       "category": "naopenseiaindanisso",
-      "question": "Na linguagem de programação Python, o método que permite verificar se uma string começa com alguns caracteres é o",
-      "additional": "",
-      "correct_answer": "startswith",
+      "question": "Qual método pode ser utilizado para remover espaços no começo e fim da string?",
+      "correct_answer": "strip()",
       "incorrect_answers": [
+        "len()",
+        "removeWhiteSpace()",
+        "trimStartEnd()"
+      ]
+    },
+    {
+      "category": "naopenseiaindanisso",
+      "question": "Qual método utilizado para substituir partes de uma string?",
+      "correct_answer": "replace()",
+      "incorrect_answers": [
+        "repl()",
+        "switch()",
+        "replaceString()"
+      ]
+    },
+    {
+      "category": "naopenseiaindanisso",
+      "question": "Como se interromper um laço de repetição?",
+      "correct_answer": "break",
+      "incorrect_answers": [
+        "stop",
         "return",
-        "len",
-        "count"
+        "exit"
       ]
     },
     {
       "category": "naopenseiaindanisso",
-      "question": "Considere uma String s, que armazena o valor 'ALO MUNDO'. A alternativa com as instruções que exibiriam a substring 'MU' seria",
-      "additional": "",
-      "correct_answer": "s[-5:-3]",
+      "question": "O método ______ deve ser usado para alterar um dado no servidor.",
+      "correct_answer": "PUT",
       "incorrect_answers": [
-        "s[5:6]",
-        "s.substring(5,7)",
-        "s.substr(4,6)"
+        "GET",
+        "DELETE",
+        "POST"
       ]
     },
     {
       "category": "naopenseiaindanisso",
-      "question": "No comando de atribuição em Python valor = raw_input(“Digite um valor: ”), qual o tipo da variável valor?",
-      "additional": "",
-      "correct_answer": "str",
+      "question": "O método ______, por sua vez, deve ser usado para obter um dado do servidor.",
+      "correct_answer": "GET",
       "incorrect_answers": [
-        "bool",
-        "int",
-        "float"
+        "PUT",
+        "DELETE",
+        "POST"
       ]
     },
     {
       "category": "naopenseiaindanisso",
-      "question": "Em relação às características da linguagem Python, é correto afirmar que",
-      "additional": "",
-      "correct_answer": "tem suporte a herança múltipla e polimorfismo.",
+      "question": "Finalmente, o método ______ deve ser usado para incluir um dado no servidor.",
+      "correct_answer": "POST",
       "incorrect_answers": [
-        "é uma linguagem fortemente tipada, ou seja, é preciso declarar variáveis e seus tipos.",
-        "deve ser usada, exclusivamente, para programação web.",
-        "uma String Python é uma sequência imutável, alocada estaticamente, com restrição de tamanho."
+        "PUT",
+        "DELETE",
+        "GET"
       ]
     },
     {
       "category": "naopenseiaindanisso",
-      "question": "Considere o trecho de código: candidatos = ['José', 'João', 'Cibelly', 'Sonivaldo','Dariane']. É CORRETO afirmar que",
-      "additional": "",
-      "temp": "",
-      "correct_answer": "candidatos[-2] retornaria o penúltimo elemento da lista.",
+      "question": "Qual das tags abaixo NÃO é uma novidade do HTML5",
+      "correct_answer": "<div>",
       "incorrect_answers": [
-        "candidatos.len() obtem o tamanho da lista.",
-        "o método append é utilizado para adicionar um elemento no início da lista.",
-        "o comando insert('Antônio') insere “Antônio” no início da lista."
+        "<article>",
+        "<section>",
+        "<header>"
       ]
     },
     {
       "category": "naopenseiaindanisso",
-      "question": "Em Python, quando mais de um operador aparece em uma expressão, a ordem de avaliação depende das regras de precedência de cada linguagem. Assim, ao programar em Python, além de observar essas regras, é preciso considerar, ainda, a forma como a linguagem representa seus operadores, conforme demonstrado nos comandos a seguir.",
-      "additional": "x=7*3**2%4 print (x)",
-      "correct_answer": "3",
+      "question": "Como fazer para um elemento de classe texto receber a cor azul?",
+      "correct_answer": ".texto{color: blue;}",
       "incorrect_answers": [
-        "1",
-        "7",
-        "15"
+        "#texto{text-color: blue;}",
+        ".texto{text-color: blue;}",
+        ".texto{font-color: blue;}"
       ]
     },
     {
       "category": "naopenseiaindanisso",
-      "question": "Na linguagem de programação Python, existem 3 estruturas para armazenar dados indexados. A estrutura cujos valores são imutáveis depois de sua criação é conhecida como:",
-      "additional": "",
-      "correct_answer": "tupla",
+      "question": "Uma área de 1 terabyte (TB) armazena:",
+      "correct_answer": "1.073.741.824 bytes (B)",
       "incorrect_answers": [
-        "operador",
-        "lista",
-        "classe"
+        "1.099.511.627.776 kilobytes (KB)",
+        "2048 gigabytes (GB)",
+        "1.048.576 megabytes (MB)"
       ]
     },
     {
       "category": "naopenseiaindanisso",
-      "question": "Assinale a alternativa que apresenta o código Python que implementa corretamente uma função para o cálculo da área de um retângulo.",
-      "additional": "",
-      "correct_answer": "def area(comp, larg): return comp * larg",
+      "question": "A linguagem HTML, para produzir páginas na Web, trata-se de uma linguagem do tipo",
+      "correct_answer": "de marcação",
       "incorrect_answers": [
-        "def area(comp, larg){ return comp*larg}",
-        "function area(comp, larg): return comp*larg",
-        "def area(comp, larg)(return comp*larg)"
+        "de script",
+        "orientada a objetos",
+        "funcional"
       ]
     },
     {
       "category": "naopenseiaindanisso",
-      "question": "Um desenvolvedor implementou um programa para exibir a média de um dado retirado de uma grande base de dados. O trecho do código que mostra o resultado é apresentado a seguir. Assinale a alternativa correta acerca desse trecho de código sabendo que a média do usuário foi 75.",
-      "additional": "print('Sua média foi {}.'.format(med))",
-      "correct_answer": "O programa imprime: Sua média foi 75.",
+      "question": "O que significa a sigla RDP",
+      "correct_answer": "Remote Desktop Protocol",
       "incorrect_answers": [
-        "O programa imprime: Sua média foi {}",
-        "O programa imprime: Sua média foi Null",
-        "O programa apresenta um erro na impressão porque tenta converter tipo numérico em caractere."
-      ]
-    },
-    {
-      "category": "naopenseiaindanisso",
-      "question": "Analise o seguinte código Python, escrito por um cientista de dados, e assinale a alternativa correta",
-      "additional": "nome = input('Qual o seu nome?') print(nome)",
-      "correct_answer": "O resultado do comando print é apresentar na tela o nome informado pelo usuário. ",
-      "incorrect_answers": [
-        "O código não irá funcionar pois está faltando ‘;’ ao final de cada linha.",
-        "Falta a estrutura correta de criação de uma classe para a execução do comando.",
-        "Falta definir o tipo da variável nome, por isso o programa não irá executar."
-      ]
-    },
-    {
-      "category": "naopenseiaindanisso",
-      "question": " O método capitalize da classe String do Python é utilizado para:",
-      "additional": "",
-      "correct_answer": "retornar uma cópia de uma string somente com o primeiro caractere em maiúsculo.",
-      "incorrect_answers": [
-        "remover todos os espaços de uma string.",
-        "verificar se todos os caracteres da string são numéricos.",
-        "retornar uma cópia de uma string com todos os caracteres em minúsculo."
-      ]
-    },
-    {
-      "category": "naopenseiaindanisso",
-      "question": " Sobre a linguagem de programação Python, marque a alternativa INCORRETA.",
-      "additional": "",
-      "correct_answer": "O operador lógico de conjunção ('e', como em a e b) é &&.",
-      "incorrect_answers": [
-        "A separação de blocos de código em Phyton é feita utilizando a indentação de código.",
-        "As funções são definidas em Phyton utilizando a palavra chave def.",
-        "Python suporta e faz uso constante de tratamento de exceções como uma forma de testar condições de erro e outros eventos inesperados no programa."
-      ]
-    },
-    {
-      "category": "naopenseiaindanisso",
-      "question": "Analise o seguinte código Python, escrito por um cientista de dados, e assinale a alternativa correta.",
-      "additional": "num = 88    print ('par' if num%2 == 0 else 'ímpar')",
-      "correct_answer": "O resultado da execução de código é a informação ‘par’ na tela. ",
-      "incorrect_answers": [
-        "O resultado da execução de código é a informação ‘ímpar’ na tela.",
-        "O código executado apresenta na tela o resultado ‘0’.",
-        "O código gera um erro, pois o comando if...else não está correto."
-      ]
-    },
-    {
-      "category": "naopenseiaindanisso",
-      "question": "Na linguagem de programação Python, o método que permite verificar se uma string começa com alguns caracteres é o",
-      "additional": "",
-      "correct_answer": "startswith",
-      "incorrect_answers": [
-        "return",
-        "len",
-        "count"
-      ]
-    },
-    {
-      "category": "naopenseiaindanisso",
-      "question": "Considere uma String s, que armazena o valor 'ALO MUNDO'. A alternativa com as instruções que exibiriam a substring 'MU' seria",
-      "additional": "",
-      "correct_answer": "s[-5:-3]",
-      "incorrect_answers": [
-        "s[5:6]",
-        "s.substring(5,7)",
-        "s.substr(4,6)"
-      ]
-    },
-    {
-      "category": "naopenseiaindanisso",
-      "question": "No comando de atribuição em Python valor = raw_input(“Digite um valor: ”), qual o tipo da variável valor?",
-      "additional": "",
-      "correct_answer": "str",
-      "incorrect_answers": [
-        "bool",
-        "int",
-        "float"
-      ]
-    },
-    {
-      "category": "naopenseiaindanisso",
-      "question": "Em relação às características da linguagem Python, é correto afirmar que",
-      "additional": "",
-      "correct_answer": "tem suporte a herança múltipla e polimorfismo.",
-      "incorrect_answers": [
-        "é uma linguagem fortemente tipada, ou seja, é preciso declarar variáveis e seus tipos.",
-        "deve ser usada, exclusivamente, para programação web.",
-        "uma String Python é uma sequência imutável, alocada estaticamente, com restrição de tamanho."
-      ]
-    },
-    {
-      "category": "naopenseiaindanisso",
-      "question": "Considere o trecho de código: candidatos = ['José', 'João', 'Cibelly', 'Sonivaldo','Dariane']. É CORRETO afirmar que",
-      "additional": "",
-      "temp": "",
-      "correct_answer": "candidatos[-2] retornaria o penúltimo elemento da lista.",
-      "incorrect_answers": [
-        "candidatos.len() obtem o tamanho da lista.",
-        "o método append é utilizado para adicionar um elemento no início da lista.",
-        "o comando insert('Antônio') insere “Antônio” no início da lista."
-      ]
-    },
-    {
-      "category": "naopenseiaindanisso",
-      "question": "Em Python, quando mais de um operador aparece em uma expressão, a ordem de avaliação depende das regras de precedência de cada linguagem. Assim, ao programar em Python, além de observar essas regras, é preciso considerar, ainda, a forma como a linguagem representa seus operadores, conforme demonstrado nos comandos a seguir.",
-      "additional": "x=7*3**2%4 print (x)",
-      "correct_answer": "3",
-      "incorrect_answers": [
-        "1",
-        "7",
-        "15"
-      ]
-    },
-    {
-      "category": "naopenseiaindanisso",
-      "question": "Na linguagem de programação Python, existem 3 estruturas para armazenar dados indexados. A estrutura cujos valores são imutáveis depois de sua criação é conhecida como:",
-      "additional": "",
-      "correct_answer": "tupla",
-      "incorrect_answers": [
-        "operador",
-        "lista",
-        "classe"
-      ]
-    },
-    {
-      "category": "naopenseiaindanisso",
-      "question": "Assinale a alternativa que apresenta o código Python que implementa corretamente uma função para o cálculo da área de um retângulo.",
-      "additional": "",
-      "correct_answer": "def area(comp, larg): return comp * larg",
-      "incorrect_answers": [
-        "def area(comp, larg){ return comp*larg}",
-        "function area(comp, larg): return comp*larg",
-        "def area(comp, larg)(return comp*larg)"
-      ]
-    },
-    {
-      "category": "naopenseiaindanisso",
-      "question": "Um desenvolvedor implementou um programa para exibir a média de um dado retirado de uma grande base de dados. O trecho do código que mostra o resultado é apresentado a seguir. Assinale a alternativa correta acerca desse trecho de código sabendo que a média do usuário foi 75.",
-      "additional": "print('Sua média foi {}.'.format(med))",
-      "correct_answer": "O programa imprime: Sua média foi 75.",
-      "incorrect_answers": [
-        "O programa imprime: Sua média foi {}",
-        "O programa imprime: Sua média foi Null",
-        "O programa apresenta um erro na impressão porque tenta converter tipo numérico em caractere."
-      ]
-    },
-    {
-      "category": "naopenseiaindanisso",
-      "question": "Analise o seguinte código Python, escrito por um cientista de dados, e assinale a alternativa correta",
-      "additional": "nome = input('Qual o seu nome?') print(nome)",
-      "correct_answer": "O resultado do comando print é apresentar na tela o nome informado pelo usuário. ",
-      "incorrect_answers": [
-        "O código não irá funcionar pois está faltando ‘;’ ao final de cada linha.",
-        "Falta a estrutura correta de criação de uma classe para a execução do comando.",
-        "Falta definir o tipo da variável nome, por isso o programa não irá executar."
-      ]
-    },
-    {
-      "category": "naopenseiaindanisso",
-      "question": " O método capitalize da classe String do Python é utilizado para:",
-      "additional": "",
-      "correct_answer": "retornar uma cópia de uma string somente com o primeiro caractere em maiúsculo.",
-      "incorrect_answers": [
-        "remover todos os espaços de uma string.",
-        "verificar se todos os caracteres da string são numéricos.",
-        "retornar uma cópia de uma string com todos os caracteres em minúsculo."
-      ]
-    },
-    {
-      "category": "naopenseiaindanisso",
-      "question": " Sobre a linguagem de programação Python, marque a alternativa INCORRETA.",
-      "additional": "",
-      "correct_answer": "O operador lógico de conjunção ('e', como em a e b) é &&.",
-      "incorrect_answers": [
-        "A separação de blocos de código em Phyton é feita utilizando a indentação de código.",
-        "As funções são definidas em Phyton utilizando a palavra chave def.",
-        "Python suporta e faz uso constante de tratamento de exceções como uma forma de testar condições de erro e outros eventos inesperados no programa."
-      ]
-    },
-    {
-      "category": "naopenseiaindanisso",
-      "question": "Analise o seguinte código Python, escrito por um cientista de dados, e assinale a alternativa correta.",
-      "additional": "num = 88    print ('par' if num%2 == 0 else 'ímpar')",
-      "correct_answer": "O resultado da execução de código é a informação ‘par’ na tela. ",
-      "incorrect_answers": [
-        "O resultado da execução de código é a informação ‘ímpar’ na tela.",
-        "O código executado apresenta na tela o resultado ‘0’.",
-        "O código gera um erro, pois o comando if...else não está correto."
-      ]
-    },
-    {
-      "category": "naopenseiaindanisso",
-      "question": "Na linguagem de programação Python, o método que permite verificar se uma string começa com alguns caracteres é o",
-      "additional": "",
-      "correct_answer": "startswith",
-      "incorrect_answers": [
-        "return",
-        "len",
-        "count"
-      ]
-    },
-    {
-      "category": "naopenseiaindanisso",
-      "question": "Considere uma String s, que armazena o valor 'ALO MUNDO'. A alternativa com as instruções que exibiriam a substring 'MU' seria",
-      "additional": "",
-      "correct_answer": "s[-5:-3]",
-      "incorrect_answers": [
-        "s[5:6]",
-        "s.substring(5,7)",
-        "s.substr(4,6)"
-      ]
-    },
-    {
-      "category": "naopenseiaindanisso",
-      "question": "No comando de atribuição em Python valor = raw_input(“Digite um valor: ”), qual o tipo da variável valor?",
-      "additional": "",
-      "correct_answer": "str",
-      "incorrect_answers": [
-        "bool",
-        "int",
-        "float"
+        "Remote Download Protocol",
+        "React Desktop Protocol",
+        "Relative Density Protein"
       ]
     }
   ]

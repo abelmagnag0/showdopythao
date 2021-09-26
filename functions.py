@@ -9,6 +9,9 @@ api = open('db.json',)
 data = json.load(api)
 df = pd.DataFrame(data["results"])
 
+contador_score = 0
+
+
 def preload_data(idx):
     question = df["question"][idx]
     correct = df["correct_answer"][idx]
@@ -85,7 +88,7 @@ def clear_parameters():
             for i in range(0, len(parameters[parm])):
                 parameters[parm].pop()
 
-    parameters["index"].append(random.randint(0, 49))
+    parameters["index"].append(random.randint(0, 25))
     parameters["score"].append(0)
 
 
@@ -111,9 +114,10 @@ def create_buttons(answer, l_margin, r_margin):
         "margin-right: " + str(r_margin) + "px;" +
         "color: #FCFAEC;" +
         "font-family: 'shanti';" +
-        "font-size: 16px;" +
+        "font-size: 12px;" +
+        "white-space: no-wrap;"
         "border-radius: 15px;" +
-        "padding: 15px 0;" +
+        "padding: 8px 0;" +
         "background: '#008878';" +
         "margin-top: 20px}" +
         "*:hover{color: #1E1C0C;" +
@@ -123,15 +127,43 @@ def create_buttons(answer, l_margin, r_margin):
     return button
 
 
+def format_score():
+    global contador_score
+
+    if contador_score == 0:
+        new_score = '500'
+    elif contador_score == 1:
+        new_score = '1k'
+    elif contador_score == 2:
+        new_score = '2.5k'
+    elif contador_score == 3:
+        new_score = '5k'
+    elif contador_score == 4:
+        new_score = '25k'
+    elif contador_score == 5:
+        new_score = '100k'
+    elif contador_score == 6:
+        new_score = '250k'
+    elif contador_score == 7:
+        new_score = '500k'
+    elif contador_score == 8:
+        new_score = '1M'
+
+    if contador_score < 8:
+        contador_score += 1
+
+    return new_score
+
+
 def is_correct(btn):
 
     if btn.text() == parameters["correct"][-1]:
-        temp_score = parameters["score"][-1]
+        new_score = format_score()
         parameters["score"].pop()
-        parameters["score"].append(temp_score + 10)
+        parameters["score"].append(new_score)
 
         parameters["index"].pop()
-        parameters["index"].append(random.randint(0, 49))
+        parameters["index"].append(random.randint(0, 25))
 
         preload_data(parameters["index"][-1])
 
@@ -188,13 +220,10 @@ def frame2():
     score = QLabel(str(parameters["score"][-1]))
     score.setAlignment(QtCore.Qt.AlignRight)
     score.setStyleSheet(
-        "font-size: 35px;" +
+        "font-size: 25px;" +
         "color: 'white';" +
-        "padding: 15px 10px;" +
-        "margin: 20px 200px;" +
-        "background: '#64a314';" +
-        "border: 1px solid #64a314;" +
-        "border-radius: 35px;"
+        "padding: 10px 0px;" +
+        "margin: 20px 200px;" 
     )
     widgets["score"].append(score)
 
@@ -204,8 +233,11 @@ def frame2():
     question.setStyleSheet(
         "font-family: Shanti;" +
         "font-size: 15px;" +
+        "text-align: justify;" +
+        "background: #045245;" +
+        "border-radius: 20px;" +
         "color: 'white';" +
-        "padding: 75px;"
+        "padding: 20px 10px;"
     )
     widgets["question"].append(question)
 
