@@ -12,9 +12,9 @@ window = QWidget()
 window.setWindowTitle("Show do Pythão")
 
 # tamanho da tela e onde ela se inicia
-window.setFixedWidth(1000)
+window.setFixedWidth(1100)
 window.move(460, 200)
-    
+
 window.setStyleSheet("background:  #62BAAC;")
 
 frame1()

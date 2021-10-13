@@ -4,12 +4,12 @@ from PyQt5 import QtCore
 import json
 import pandas as pd
 import random
+# esse daqui é o de colocar tempo, dps da uma olahda
+from threading import Timer
 
 api = open('db.json',)
 data = json.load(api)
 df = pd.DataFrame(data["results"])
-
-contador_score = 0
 
 
 def preload_data(idx):
@@ -67,8 +67,12 @@ widgets = {
     "answer3": [],
     "answer4": [],
     "message": [],
-    "message2": []
+    "message2": [],
+    "ajuda1": [],
+    "ajuda2": []
 }
+
+contador_score = 0
 
 # start grid
 grid = QGridLayout()
@@ -90,6 +94,9 @@ def clear_parameters():
 
     parameters["index"].append(random.randint(0, 25))
     parameters["score"].append(0)
+
+    global contador_score
+    contador_score = 0
 
 
 def show_frame1():
@@ -149,8 +156,8 @@ def format_score():
     elif contador_score == 8:
         new_score = '1M'
 
-    if contador_score < 8:
-        contador_score += 1
+    
+    contador_score += 1
 
     return new_score
 
@@ -167,14 +174,14 @@ def is_correct(btn):
 
         preload_data(parameters["index"][-1])
 
-        widgets["score"][-1].setText(str(parameters["score"][-1]))
+        widgets["score"][-1].setText(parameters["score"][-1])
         widgets["question"][0].setText(parameters["question"][-1])
         widgets["answer1"][0].setText(parameters["answer1"][-1])
         widgets["answer2"][0].setText(parameters["answer2"][-1])
         widgets["answer3"][0].setText(parameters["answer3"][-1])
         widgets["answer4"][0].setText(parameters["answer4"][-1])
 
-        if parameters["score"][-1] == 100:
+        if contador_score > 8:
             clear_widgets()
             frame3()
     else:
@@ -215,18 +222,61 @@ def frame1():
     grid.addWidget(widgets["logo"][-1], 0, 0, 1, 2)
     grid.addWidget(widgets["button"][-1], 1, 0, 1, 2)
 
+# def start_countdown():
+#     t = Timer(number_of_seconds, timeout)
+#     t.start()
+#     clear_widgets()
+#     frame4()
 
 def frame2():
+    ajuda1 = QPushButton("Universitários")
+    ajuda1.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
+    ajuda1.setFixedWidth(100)
+    ajuda1.setStyleSheet(
+        "*{border: 4px solid '#8fc740';" +
+        "color: #FCFAEC;" +
+        "font-family: 'shanti';" +
+        "font-size: 12px;" +
+        "white-space: no-wrap;"
+        "border-radius: 15px;" +
+        "background: '#8fc740';" +
+        "margin-top: 20px}" +
+        "*:hover{color: #1E1C0C;" +
+        "font-weight: bold;}"
+    )
+    # button.clicked.connect(lambda x: is_correct(button))
+    widgets["ajuda1"].append(ajuda1)
+
+    ajuda2 = QPushButton("1/2")
+    ajuda2.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
+    ajuda2.setFixedWidth(100)
+    ajuda2.setStyleSheet(
+        "*{border: 4px solid '#8fc740';" +
+        "color: #FCFAEC;" +
+        "font-family: 'shanti';" +
+        "font-size: 12px;" +
+        "white-space: no-wrap;"
+        "border-radius: 15px;" +
+        "background: '#8fc740';" +
+        "margin-top: 20px}" +
+        "*:hover{color: #1E1C0C;" +
+        "font-weight: bold;}"
+    )
+    ajuda2.clicked.connect(lambda x: corta_metade(ajuda2))
+    widgets["ajuda2"].append(ajuda2)
+
     score = QLabel(str(parameters["score"][-1]))
-    score.setAlignment(QtCore.Qt.AlignRight)
+    score.setAlignment(QtCore.Qt.AlignLeft)
     score.setStyleSheet(
         "font-size: 25px;" +
         "color: 'white';" +
         "padding: 10px 0px;" +
-        "margin: 20px 200px;" 
+        "margin: 20px 0px;" 
     )
     widgets["score"].append(score)
-
+    def corta_metade():
+        return "soltaram os cobrao"
+        
     question = QLabel(parameters["question"][-1])
     question.setAlignment(QtCore.Qt.AlignCenter)
     question.setWordWrap(True)
@@ -261,7 +311,9 @@ def frame2():
     )
     widgets["logo"].append(logo)
 
-    grid.addWidget(widgets["score"][-1], 0, 1)
+    grid.addWidget(widgets["score"][-1], 0, 0)
+    grid.addWidget(widgets["ajuda1"][-1], 0, 1)
+    grid.addWidget(widgets["ajuda2"][-1], 0, 2)
     grid.addWidget(widgets["question"][-1], 1, 0, 1, 2)
     grid.addWidget(widgets["answer1"][-1], 2, 0)
     grid.addWidget(widgets["answer2"][-1], 2, 1)
@@ -269,10 +321,10 @@ def frame2():
     grid.addWidget(widgets["answer4"][-1], 3, 1)
     grid.addWidget(widgets["logo"][-1], 4, 0, 1, 2)
 
-
+    
 def frame3():
     # congratz
-    message = QLabel("Parabéns! Você\né um bom programador!\nSeu score é de:")
+    message = QLabel("Parabéns! Você\né um bom programador \ne acaba de faturar: ")
     message.setAlignment(QtCore.Qt.AlignRight)
     message.setStyleSheet(
         "font-family: 'Shanti'; font-size: 25px; color: white; margin: 100px 0px;"
@@ -280,7 +332,7 @@ def frame3():
     widgets["message"].append(message)
 
     # score widget
-    score = QLabel("100")
+    score = QLabel(parameters["score"][-1])
     score.setStyleSheet(
         "font-size: 100px; color: #8fc740; margin: 0px 75px 0px 75px;")
     widgets["score"].append(score)
@@ -294,9 +346,9 @@ def frame3():
     widgets["message2"].append(message2)
 
     # button widget
-    button = QPushButton('TRY AGAIN')
+    button = QPushButton('JOGAR')
     button.setStyleSheet(
-        "*{background: '#BC006C'; padding: 25px 0px; border: 1px solid '#bc006c'; color: 'white'; font-family: 'Arial'; font-size 25px; border-radius: 40px; margin: 10px 300px;} *:hover{background:'#ff1b9e';}"
+        "*{background: '#006B5F'; padding: 25px 0px; border: 1px solid '#006B5F'; color: 'white'; font-family: 'Arial'; font-size 25px; border-radius: 40px; margin: 10px 300px;} *:hover{background:'#8fc740';}"
     )
     button.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
     button.clicked.connect(frame1)
@@ -323,7 +375,7 @@ def frame3():
 
 def frame4():
     # sorry widget
-    message = QLabel("Sorry, this answer \nwas wrong\n your score is:")
+    message = QLabel("Desculpa, resposta errada,\nvocê iria ganhar:")
     message.setAlignment(QtCore.Qt.AlignRight)
     message.setStyleSheet(
         "font-family: 'Shanti'; font-size: 35px; color: 'white'; margin: 75px 5px; padding:20px;"
@@ -331,17 +383,21 @@ def frame4():
     widgets["message"].append(message)
 
     # score widget
-    score = QLabel(str(parameters["score"][-1]))
+    if(parameters["score"][-1] != 0):
+        score = QLabel(parameters["score"][-1])
+    else:
+        score = QLabel(str(0))
+
     score.setStyleSheet(
         "font-size: 100px; color: white; margin: 0 75px 0px 75px;")
     widgets["score"].append(score)
 
     # button widget
-    button = QPushButton('TRY AGAIN')
+    button = QPushButton('Quero tentar de novo')
     button.setStyleSheet(
         '''*{
             padding: 25px 0px;
-            background: '#BC006C';
+            background: '#006B5F';
             color: 'white';
             font-family: 'Arial';
             font-size: 35px;
@@ -349,7 +405,7 @@ def frame4():
             margin: 10px 200px;
         }
         *:hover{
-            background: '#ff1b9e';
+            background: '#8fc740';
         }'''
     )
     button.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
@@ -372,3 +428,6 @@ def frame4():
     grid.addWidget(widgets["score"][-1], 1, 1)
     grid.addWidget(widgets["button"][-1], 2, 0, 1, 2)
     grid.addWidget(widgets["logo"][-1], 3, 0, 1, 2)
+
+    clear_parameters()
+
